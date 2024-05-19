@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: blue;
+    }
+
+    .wwww {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2>Inline Event</h2>
+    <div class="wwww">
+        <button onclick="alert('welcome')">getting </button>
+        <button style="margin-left: 10px;" ondblclick="alert('Welcome To Duble click.')">getting again</button>
+        <button style="margin-left: 10px;" onmouseover="alert('Welcome To Duble click.')">getting again</button>
+    </div>
+    <h2>Dom Event Handler</h2>
+    <div class="wwww">
+        <button id="mybtn">getting </button>
+        <button style="margin-left: 10px;" id="mybtn1">getting again</button>
+    </div>
+    <h2>AddEventListener Event handler</h2>
+    <div class="wwww">
+        <button>getting </button>
+        <button style="margin-left: 10px;">getting again</button>
+    </div>
+
+
+    <script>
+        document.getElementById('mybtn').onclick = function(){
+            alert('welcome');
+        }
+        document.getElementById('mybtn1').onmouseover =function(){
+            alert('welcome again');
+        }
+    </script>
+</body>
+
+</html>
